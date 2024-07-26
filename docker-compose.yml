@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  gateway:
+    build: .
+    ports:
+      - "8888:8888"
+    env_file:
+      - ./.env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
+    networks:
+      - 20241-unb-tv-videoservice_backend_videos
+      - 20241-unb-tv-admin_default
+      - 20241-unb-tv-users_backend_users
+      - 20241-unb-tv-frontend_default
+
+networks:
+  20241-unb-tv-videoservice_backend_videos:
+    external: true
+  20241-unb-tv-admin_default:
+    external: true
+  20241-unb-tv-users_backend_users:
+    external: true
+  20241-unb-tv-frontend_default:
+    external: true
