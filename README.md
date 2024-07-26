@@ -12,7 +12,22 @@
 
 # Acessando o repositório localmente
 
-## Requisitos
+## Requisitos - Node
+
+- npm e node
+
+Primeiro passo é instalar o npm e o node, para isso siga os passos de instalação [aqui](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm?ref=sfeir.dev).
+
+Execute o servidor local:
+
+```
+> npm install
+
+> npm build
+> npm run
+```
+
+## Requisitos - Docker
 
 -   docker e docker compose
 
@@ -24,7 +39,7 @@ Execute o servidor local:
 docker compose up
 ```
 
-Acessar o localhost em: http://localhost:XXX
+Acessar o localhost em: http://localhost:8888
 
 ## Equipe EPS
 

@@ -2,7 +2,7 @@
 	"name": "2023.2-unb-tv-api-gateway",
 	"version": "1.0.0",
 	"description": "UnB TV API Gateway",
-	"main": "index.js",
+	"main": "index.ts",
 	"scripts": {
 		"start": "node dist/index.js",
 		"dev": "ts-node-dev --respawn --transpile-only src/index.ts",
