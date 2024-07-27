@@ -11,6 +11,11 @@ const videoMockedRequest = {
     url: '/api'
 } as Request
 
+const adminMockedRequest = {
+    baseUrl: '/adminservice',
+    url: '/api'
+} as Request
+
 const noSuportedMockedRequest = {
     baseUrl: '/noService',
     url: '/?all=true'
@@ -26,6 +31,12 @@ describe('Should test get url complement', () => {
         const url = getHost(videoMockedRequest)
         expect(url).toEqual('http://localhost:8002')
     })
+
+    it('Should return admin api url', () => {
+        const url = getHost(adminMockedRequest)
+        expect(url).toEqual('http://localhost:8080')
+    })
+
     it('Should return null api url', () => {
         const url = getHost(noSuportedMockedRequest)
         expect(url).toEqual('')
