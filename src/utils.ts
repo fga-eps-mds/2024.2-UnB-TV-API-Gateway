@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const USER_API_URL = process.env["USER_API_URL"] || 'http://localhost:8001';
-const VIDEO_API_URL = process.env["VIDEO_API_URL"] || 'http://localhost:8002';
-const ADMIN_API_URL = process.env["ADMIN_API_URL"] || 'http://localhost:8080';
+const USER_API_URL = process.env["USER_API_URL"] ?? 'http://localhost:8001';
+const VIDEO_API_URL = process.env["VIDEO_API_URL"] ?? 'http://localhost:8002';
+const ADMIN_API_URL = process.env["ADMIN_API_URL"] ?? 'http://localhost:8080';
 
 const getUrl = (req: Request) => {
     const parts = req.url.split('?');
@@ -18,7 +18,6 @@ const getUrl = (req: Request) => {
 }
 
 const getHost = (req: Request) => {
-    //console.log("User:", USER_API_URL, " ------- ", "Video:", VIDEO_API_URL, " ------- ", "Admin", ADMIN_API_URL);
     if (req.baseUrl.match('/videoservice')) {
         console.log("VIDEO CALLED");
         return VIDEO_API_URL;
