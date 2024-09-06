@@ -14,22 +14,25 @@ const getUrl = (req: Request) => {
 
     const queryString = parts[1];
     const updatedPath = parts[0];
-    return baseUrl + updatedPath + (queryString ? '?' + queryString : '')
+    return baseUrl + updatedPath + (queryString ? '?' + queryString : '');
 }
 
+const videoServiceRegex = /\/videoservice/;
+const userServiceRegex = /\/userservice/;
+const adminServiceRegex = /\/adminservice/;
+
 const getHost = (req: Request) => {
-    if (req.baseUrl.match('/videoservice')) {
+    if (videoServiceRegex.exec(req.baseUrl)) {
         console.log("VIDEO CALLED");
         return VIDEO_API_URL;
-    } else if (req.baseUrl.match('/userservice')) {
+    } else if (userServiceRegex.exec(req.baseUrl)) {
         console.log("USER CALLED");
         return USER_API_URL;
-    } else if (req.baseUrl.match('/adminservice')) {
+    } else if (adminServiceRegex.exec(req.baseUrl)) {
         console.log("ADMIN CALLED");
         return ADMIN_API_URL;
-    }    
-    else {
-        return ''
+    } else {
+        return '';
     }
 }
 
