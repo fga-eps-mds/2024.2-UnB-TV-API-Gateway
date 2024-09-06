@@ -8,6 +8,7 @@ dotenv.config();
 
 const app: Express = express();
 
+app.disable('x-powered-by')
 app.use(cors())
 
 const port = 8888;
