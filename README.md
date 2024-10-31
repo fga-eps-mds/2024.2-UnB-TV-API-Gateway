@@ -4,11 +4,11 @@
 
 # Repositórios
 
-- [FrontEnd](https://github.com/fga-eps-mds/2024.1-UnB-TV-Frontend)
-- [Users](https://github.com/fga-eps-mds/2024.1-UnB-TV-Users)
-- [Admin](https://github.com/fga-eps-mds/2024.1-UnB-TV-Admin)
-- [VideoService](https://github.com/fga-eps-mds/2024.1-UnB-TV-VideoService)
-- [Gateway](https://github.com/fga-eps-mds/2024.1-UnB-TV-API-Gateway)
+- [FrontEnd](https://github.com/fga-eps-mds/2024.2-UnB-TV-Frontend)
+- [Users](https://github.com/fga-eps-mds/2024.2-UnB-TV-Users)
+- [Admin](https://github.com/fga-eps-mds/2024.2-UnB-TV-Admin)
+- [VideoService](https://github.com/fga-eps-mds/2024.2-UnB-TV-VideoService)
+- [Gateway](https://github.com/fga-eps-mds/2024.2-UnB-TV-API-Gateway)
 
 # Acessando o repositório localmente
 
